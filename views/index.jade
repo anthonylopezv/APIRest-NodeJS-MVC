@@ -1,0 +1,42 @@
+extends layout.jade
+
+block content
+      section.container
+        include header.jade
+        article.item
+          -if(data.length)
+            table.tabla
+                tr
+                    th Id
+                    th Titulo
+                    th Anio
+                    th Puntuacion
+                    th Poster
+                    th(colspan="2")
+                      form(method="GET" action="/agregar")
+                        input.button.add(type="submit", value="Agregar")
+
+                -each pelicula in data
+                    tr
+                          td #{pelicula.pelicula_id}
+                          td #{pelicula.titulo}
+                          td #{pelicula.anio}
+                          td #{pelicula.rating}
+                          td
+                              img.poster(src="#{pelicula.imagen}", alt="#{pelicula.titulo}")
+                          td
+                              form(method="GET" action="/editar/#{pelicula.pelicula_id}" style="text-align:center")
+                                input.button.edit(type="submit", value="Editar")
+                          td
+                              form(method="POST" action="/eliminar/#{pelicula.pelicula_id}" style="text-align:center")
+                                input.button.delete(type="button", value="Eliminar" onclick="eliminar(this)")
+                                input(type="hidden", name="_method" value="DELETE")
+            script.
+                function eliminar(input){
+                  var deleteOk = confirm('¿Estas seguro de eliminar la pelicula?')
+                  return (deleteOk) ? input.parentNode.submit() : false
+                }
+
+
+          -else
+            p.error No existen peliculas en la BD

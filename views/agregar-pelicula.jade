@@ -1,0 +1,25 @@
+extends layout.jade
+
+block content
+  section.container
+      include header.jade
+      div.item
+          form.formulario(method="POST" action="/")
+            fieldset
+              div.container.p1
+                  label.item.i-b.v-top.ph3.p_25.right(for="pelicula_id") IMDB id:
+                  input.item.i-b.v-top.ph9.p_25#pelicula_id(type="text", name="pelicula_id", required)
+              div.container.p1
+                  label.item.i-b.v-top.ph3.p_25.right(for="titulo") Titulo:
+                  input.item.i-b.v-top.ph9.p_25#titulo(type="text", name="titulo", required)
+              div.container.p1
+                  label.item.i-b.v-top.ph3.p_25.right(for="anio") Año:
+                  input.item.i-b.v-top.ph9.p_25#anio(type="text", name="anio", required)
+              div.container.p1
+                  label.item.i-b.v-top.ph3.p_25.right(for="rating") Rating:
+                  input.item.i-b.v-top.ph9.p_25#rating(type="text", name="rating", required)
+              div.container.p1
+                  label.item.i-b.v-top.ph3.p_25.right(for="imagen") Poster:
+                  input.item.i-b.v-top.ph9.p_25#imagen(type="text", name="imagen", required)
+              div.container.p1
+                  input.item.button.add(type="submit", value="Agregar")

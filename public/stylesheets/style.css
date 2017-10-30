@@ -1,0 +1,74 @@
+body {
+  padding: 0.5px;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+html{background-color: #ffffff}
+
+a, h1, label {color:#515454 }
+
+a:hover {opacity: .75;}
+
+fieldset {
+  padding: 1rem;
+  border: medium solid #1523e6;
+  color: #000000;
+}
+
+.logo{
+  display: block;
+  margin: 1rem auto;
+  width: 450px;
+  height: 100px;
+  vertical-align: bottom;
+  background: url("../images/node-mysql.png") no-repeat center;
+  background-size: contain;
+}
+
+.error{
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: #DFF2BF;
+  color: #4F8A10;
+}
+
+.poster{
+  max-width: 150px;
+  display: block;
+  margin: 0 auto;
+}
+
+.tabla{
+  width: 100%;
+}
+
+.tabla td, .tabla th {padding: 1rem;}
+
+.tabla tr:first-child{
+  background-color:#1523e6;
+  color:#ffffff ;
+}
+
+.tabla tr:nth-child(even) {background-color: ;}
+
+.tabla tr:nth-child(odd):not(:first-child) {background-color: #bab8b5;}
+
+.button{
+  padding: .5rem 1rem;
+  color: #ffffff;
+  background-color: #1200a3;
+  cursor: pointer;
+}
+
+.button:hover{opacity: .75;}
+
+.add{background-color: #363efa;}
+
+.edit{
+  background-color: #0841b0;
+}
+
+
+.delete{
+  background-color: #c40c0c ;
+}
