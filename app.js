@@ -9,7 +9,8 @@ var bodyParser = require('body-parser');
 var faviconURL = `${__dirname}/public/images/node-favicon.png`;
 var publicDir = express.static(`${__dirname}/public`);
 var viewDir = `${__dirname}/views`;
-var port = (process.env.PORT||3000);
+var port = (process.env.PORT||5000);
+//var port = (process.env.PORT||3000);
 var app = express();
 
 app.set('views',viewDir);
